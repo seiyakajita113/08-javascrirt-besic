@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sample7-7</title>
+</head>
+
+<body>
+    <h1>果物の種類</h1>
+    <ul id="fruitslist" class="listbox__list">
+        <li>りんご</li>
+        <li>みかん</li>
+        <li>バナナ</li>
+    </ul>
+    <!--リストを操作するDOM操作のスクリプト-->
+    <script>
+        //メロンを加えたい。処理↓
+        //ul 要素を取り入れる。
+        const element = document.querySelector("ul");
+        console.log(element);
+
+        //selecterはCSSのセレクターなので、
+        const element2 = document.querySelector("#fruitslist");
+        console.log(element2);
+
+        //classも行ける？
+        const element3 = document.querySelector(".listbox__list");
+        console.log(element3);
+
+        //新しい要素を作る！
+        const lilist = document.createElement("li");
+        console.log(lilist);　//dirに変更、オブジェクトの中身が見れる。
+        lilist.textContent = "メロン";
+        console.log(lilist);
+
+
+    </script>
+</body>
+
+</html>
