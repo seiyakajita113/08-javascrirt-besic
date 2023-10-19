@@ -120,3 +120,101 @@ console.log("ABC" + "DEF"); //文字列
 ### フロントエンドロードマップ
 
 フロントエンドエンジニアに必要なスキルの[ロードマップ](https://roadmap.sh/frontend)がある。
+
+
+## 10月１９日
+コレクション（配列）
+繰り返し処理(for文)
+配列を使った複数要素の追加
+
+ ```js
+
+    <h1>人気フルーツ一覧</h1>
+    <ul id="fruitslist" class="listbox__list"></ul>
+
+
+        //ulの中に果物を一度にliで入れたい。
+        //配列fruitsを宣言・値を代入
+        const fruits = ["りんご", "もも", "バナナ"];
+
+        //バナナがほしい
+        console.log(fruits[2]);
+
+        //ulをjavaScriptを引きずり込む
+        const element = document.querySelector("#fruitslist");
+        console.log(element);
+
+        //fruitsの要素数文だけfor文で回す
+        for (let i = 0; i < fruits.length; i++) {
+            //liを送出する
+            const lilast = document.createElement("li");
+
+            //liに値(果物➡配列fruitsの中にある)を代入
+            console.log(fruits[i]); //りんご・もも・バナナが取れる。
+
+            //創出したliの内容に果物を代入
+            lilast.textContent = fruits[i];
+
+            //element(*ul)の中の最後に追加
+            element.appendChild(lilast);
+        }
+
+```
+```js
+<h1>果物の種類</h1>
+    <ul id="fruitslist" class="listbox__list">
+        <li>りんご</li>
+        <li>みかん</li>
+        <li>バナナ</li>
+    </ul>
+    <!--リストを操作するDOM操作のスクリプト-->
+
+        //メロンを加えたい。処理↓
+        //ul 要素を取り入れる。
+        const element = document.querySelector("ul");
+        console.log(element);
+
+        //selecterはCSSのセレクターなので、
+        const element2 = document.querySelector("#fruitslist");
+        console.log(element2);
+
+        //classも行ける？
+        const element3 = document.querySelector(".listbox__list");
+        console.log(element3);
+
+        //新しい要素を作るli
+        const lilist = document.createElement("li");
+        console.dir(lilist);　//dirに変更、オブジェクトの中身が見れる。
+        lilist.textContent = "メロン";
+        console.log(lilist);
+
+
+        //リストの最後に追加する.↑変数lilastの<li>メロン</li>を変数element内の<ul></ul>に追加する
+        element.appendChild(lilist);
+
+
+        //いちごを追加したい
+        const liLast2 = document.createElement("li");
+        //いちごを追加
+        liLast2.textContent = "いちご";
+        // リストの最後の子要素として追加
+        element.appendChild(liLast2);
+
+    ```
+
+ for (let i = 0; i < 4; i++) {
+            //繰り返しの処理を書いていきます。
+            //0から3を表示したい。
+            console.log(i)
+        }
+
+
+        const name_list = ["松田", "田中", "中山", "山本", "本田", "鬼頭",];
+        console.log(name_list);
+        //山本がほしい
+        console.log(name_list[3]);
+
+        for (let i = 0; i < name_list.length; i++) {
+            console.log(i);
+            console.log(name_list[i]);
+        }

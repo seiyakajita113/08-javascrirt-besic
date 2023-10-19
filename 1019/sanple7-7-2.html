@@ -36,6 +36,17 @@
         console.log(lilist);
 
 
+        //リストの最後に追加する.↑変数lilastの<li>メロン</li>を変数element内の<ul></ul>に追加する
+        element.appendChild(lilist);
+
+
+        //いちごを追加したい
+        const liLast2 = document.createElement("li");
+        //いちごを追加
+        liLast2.textContent = "いちご";
+        // リストの最後の子要素として追加
+        element.appendChild(liLast2);
+
     </script>
 </body>
 

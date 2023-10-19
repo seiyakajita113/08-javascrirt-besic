@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演習</title>
+
+</head>
+
+<body>
+    <dl class="recipe">
+        <dt>カップヌードルの作り方</dt>
+        <dd>フタを途中まで開ける</dd>
+        <dd>お湯を線まで入れてフタをする</dd>
+        <!-- ここに入れたい -->
+    </dl>
+    <script>
+        const element = document.querySelector(".recipe");
+        console.log(element);
+
+        const ddlast = document.createElement("dd")
+        ddlast.innerText = "3分待って出来上がり";
+
+        element.appendChild(ddlast); //終了
+
+        //宣言・代入
+        const animals = ["dog", "cat", "bird"];
+
+        //確認
+        console.log(animals);
+
+        //cat 取得
+        console.log(animals[1]);
+
+        // 長さ
+        console.log(animals.length);　//3
+
+
+        for (let i = 0; i < 9; i++) {
+            console.log(i); //０〜８が表示される
+
+            console.log(i + 1);
+
+            console.log(7 * (i + 1));
+
+            //文字列の連結と組み合わせる
+            console.log(7 + "*" + (i + 1) + "=" + 7 * (i + 1));
+
+            //テンプレートリテラル
+            console.log('7 * ${ i + 1 } = ${7 * ( i + 1 )}');
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
