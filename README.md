@@ -201,20 +201,3 @@ console.log("ABC" + "DEF"); //文字列
         element.appendChild(liLast2);
 
     ```
-
- for (let i = 0; i < 4; i++) {
-            //繰り返しの処理を書いていきます。
-            //0から3を表示したい。
-            console.log(i)
-        }
-
-
-        const name_list = ["松田", "田中", "中山", "山本", "本田", "鬼頭",];
-        console.log(name_list);
-        //山本がほしい
-        console.log(name_list[3]);
-
-        for (let i = 0; i < name_list.length; i++) {
-            console.log(i);
-            console.log(name_list[i]);
-        }
