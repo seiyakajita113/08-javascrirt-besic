@@ -201,3 +201,65 @@ console.log("ABC" + "DEF"); //文字列
         element.appendChild(liLast2);
 
     ```
+
+## 10月26日
+```js
+<body>
+  <section>
+    <h1>犬のギャラリー</h1>
+    <div class="card1">
+      <h2>柴犬の散歩</h2>
+      <p>雨だったけど、散歩に連れて行った</p>
+    </div>
+    <div class="card2">
+      <h2>秋田犬の寝顔</h2>
+      <p>普段は不細工だけど、寝顔はかわいい</p>
+    </div>
+    <img src="images/dog001.png" alt="柴犬" id="pochi" class="shibaDog" />
+    <img src="images/dog002.png" alt="秋田犬" id="hachiko" class="akitaDog" />
+  </section>
+  <script>
+    //ここに記述していきます
+    //柴犬の画像を取得する
+    const shiba = document.querySelector(".shibaDog");
+    console.log(shiba);
+    //秋田犬の画像を取得する
+    const akita = document.querySelector(".akitaDog");
+    console.log(akita);
+    //<div class="card1">を取得する
+    const shiba_card = document.querySelector(
+      ".card1"
+    );
+    //<div class="card2">を取得する
+    console.log(shiba_card);
+    const akita_card = document.querySelector(
+      ".card2"
+    );
+    console.log(akita_card);
+    //柴犬が入った変数をappendChild で追加する
+    const shiba_Dog = document.querySelector("card1");
+    shiba_card.appendChild(shiba);
+    //秋田犬が入った変数をappendChild で追加する
+    const akita_Dog = document.querySelector("card2");
+    akita_card.appendChild(akita);
+
+
+
+  </script>
+  <script>
+
+
+    //両方とも秋田犬にする
+    const shibainu = document.querySelector(".shibaDog");
+    shiba.setAttribute("src", "images/dog002.png");
+    //Attributeは属性という意味
+
+
+
+
+
+
+
+
+  </script>
+```
