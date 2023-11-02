@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <h1 id="header">ヘッドスピン</h1>
+
+  <div class="btnArea">
+    <div class="button dancing">Let’sダンス</div>
+    <div class="button stop">ストップ</div>
+    <div class="button change">ダンサーチェンジ</div>
+  </div>
+  <div class="imgArea">
+    <img src="images/dance_breakdance_headspin.png" alt="ブレイクダンサーいらすと" />
+  </div>
+  <script>
+    //ここに記述します。
+    //変数dacingBtnに「Let'sダンス」ボタンを取得する。
+    const dacingBtn = document.querySelector(".dancing");
+    console.log(dacingBtn);
+    //変数stopBtnに「ストップ」ボタンを取得する。
+    const stopBtn = document.querySelector(".stop");
+    console.log(stopBtn);
+    // 変数changeBtnに「ダンサーチェンジ」ボタンを取得する。
+    const changeBtn = document.querySelector(".change");
+    console.log(changeBtn);
+    // 変数dancerにimg要素を取得する。
+
+    const dancer = document.querySelector(".imgArea img");
+    console.log(dancer);
+
+    // 変数dancingBtnにclickイベントを設定する。
+    // 設定したclickイベントにsetAttributeでclass属性にdanceを設定
+    dacingBtn.addEventListener("click", function () {
+      dancer.setAttribute("class", "dance");
+    });
+
+    stopBtn.addEventListener("click", function () {
+      dancer.setAttribute("class", "");
+    });
+
+    changeBtn.addEventListener("click", function () {
+      dancer.setAttribute("src", "images/ballet_woman.png");
+      dancer.setAttribute("alt", "バレリーナいらすと");
+    });
+
+
+  </script>
+</body>
+
+</html>

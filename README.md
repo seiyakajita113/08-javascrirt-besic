@@ -3,7 +3,10 @@
 ## 授業内コード
 1. 10月5日（木）初めての一歩
 2. 10月5日（木）githab リポジトリ作成
-
+3. 10月12日（木）
+4. 10月19日（木）
+5. 10月26日（木）
+6. 11月2日（木）
 
 ## 10 月　12　日
 
@@ -256,10 +259,23 @@ console.log("ABC" + "DEF"); //文字列
 
 
 
-
-
-
-
-
   </script>
+```
+
+
+
+###　文字列の計算
+
+```js
+elem.classList.add("class"); //クラスの追加します。
+elem.classList.remove("class"); //クラスの削除をします。
+elem.classList.toggle("class"); //クラスが存在する場合は削除します。なければ追加します。
+elem.classList.contains("class"); //クラスをの有無をチェックし、true/falseを返します。
+
+//※nameは属性名、valueは値（属性値
+elem.hasAttribute(name); //存在をチェックします。
+elem.getAttribute(name); //値を取得します。
+elem.setAttribute(name, value); //値を設定します。
+elem.removeAttribute(name); //属性を削除します。
+
 ```
