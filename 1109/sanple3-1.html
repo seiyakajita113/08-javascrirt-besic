@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sanple3-1改</title>
+</head>
+
+<body>
+    <h1>if文による条件分岐</h1>
+    <script>
+        /* ※ブロックコメント
+      条件分岐のサンプル(1)
+      if文による条件分岐*/
+
+        const num = 100;
+
+        //条件分岐 ※行コメント
+        if (num >= 100) {
+            document.body.insertAdjacentHTML("beforeEnd", "<p>numは0です</p>");
+        } else if (n === 2) {
+            document.body.insertAdjacentHTML("beforeEnd", "<p>numは</p>");
+        } else if (n === 3) {
+            document.body.insertAdjacentHTML("beforeEnd", "<p>num</p>");
+        }
+
+
+        if (num >= 100) {
+            document.body.insertAdjacentHTML("beforeEnd", "<p>numは100以上</p>");
+        }
+
+        console.log(num >= 100);
+
+        //==と===
+        console.log(1 == 1); //true
+        console.log(1 === 1); //true
+
+        console.log(1 == "1"); //true
+        console.log(1 === "1"); //false なぜ？　""文字列型　""がない場合数値型　===のときはfalse
+
+    </script>
+</body>
+
+</html>
