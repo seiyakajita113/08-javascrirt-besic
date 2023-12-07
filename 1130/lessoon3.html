@@ -7,11 +7,17 @@
     <title>演習</title>
 
 <body>
+
     <ul>
         <li>犬</li>
         <li>猫</li>
     </ul>
     <p class="result"></p>
+    <button class="lesserafimBtn">ルセラフィム</button>
+    <button class="onepeaceBtn">麦わらの一味</button>
+
+
+
     <div class="fnArea"></div>
     <script>
         const dogbtn = document.querySelector("li");
@@ -80,15 +86,56 @@
             for (let i = 0; i < members.length; i++) {
                 const liElm = document.createElement("li");
                 liElm.textContent = members[i];
-                console.log(liElm);
-
+                console.log(liElm, ulElm);
+                ulElm.appendChild(liElm);
             }
+            memberArea.appendChild(ulElm);
         };
 
 
         //関数の実行
-        memberPush(member_list); //LESLAFIMのメンバー
-        menubarPush(mugiwara_list);//麦わらの一味
+        // memberPush(member_list); //LESLAFIMのメンバー
+        // memberPush(mugiwara_list);//麦わらの一味
+
+
+        //bottonを取る
+        const lesserafimBtn = document.querySelector(".lesserafimBtn");
+        const onepeaceBtn = document.querySelector(".onepeaceBtn");
+
+
+        lesserafimBtn.addEventListener("click", function () {
+            console.log("ルセラフィム");
+            memberPush(member_list);
+        })
+
+        lesserafimBtn.addEventListener("click", function () {
+            console.log("麦わらの一味");
+            memberPush(mugiwara_list);
+        })
+
+
+        //引数1と引数2を足す、関数の定義
+        const addition = function (a, b) {
+            const c = a + b;
+            console.log(c);
+        }
+
+        //関数の実行
+        addition(30, 11); //コンソールに21を表示される。
+        addition(30, (6)); //文字連結なので306
+
+
+        //戻り地のある関数の定義
+        const addition2 = function (a, b) {
+            const c = a + b
+            return c; //戻り値
+        }
+
+
+        //関数の実行
+        result(5, 5) //25
+        console.log(result); //コンソールに25と表示される
+
 
 
     </script>

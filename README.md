@@ -203,7 +203,7 @@ console.log("ABC" + "DEF"); //文字列
         // リストの最後の子要素として追加
         element.appendChild(liLast2);
 
-    ```
+  ```
 
 ## 10月26日
 ```js
@@ -279,3 +279,56 @@ elem.setAttribute(name, value); //値を設定します。
 elem.removeAttribute(name); //属性を削除します。
 
 ```
+
+
+## 1207
+
+
+```js
+<body>
+    <p>ケーキ（450円）の税込み価格</p>
+    <button class="takeOut">テイクアウト</button>
+    <button class="eatIn">イートイン</button>
+    <p>税込み価格は、<span class="taxIn"></span>円です。</p>
+
+    <script>
+
+        const cake = 450;
+
+        const takeOutBtn = document.querySelector(".takeOut");
+        console.log(takeOutBtn);
+        const eatInBtn = document.querySelector(".eatIn");
+        console.log(eatInBtn);
+        const result = document.querySelector(".taxIn");
+        console.log(result);
+
+        const calculation = function (cake, tax) {
+            const result = cake + cake * tax;//商品＋消費税
+            return result; //戻り値
+        };
+
+        //クリックイベント
+        takeOutBtn.addEventListener("click", function () {
+            //関数の実行
+            const price = calculation(cake, 0.08);
+            result.innerHTML = price;
+
+        })
+
+        eatInBtn.addEventListener("click", function () {
+            //関数の実行
+            const price = calculation(cake, 0.1)
+            result.innerHTML = price;
+
+        })
+```
+
+
+
+
+
+
+
+
+    </script>
+</body>
