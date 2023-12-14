@@ -83,6 +83,13 @@
     preBtn.addEventListener("click", function () {
       prevStep();
     });
+
+    //2秒で切り替わる
+    const slideShow = function (func) {
+      setInterval(func, 2000);
+    };
+    slideShow(nextStep);
+
   </script>
 </body>
 

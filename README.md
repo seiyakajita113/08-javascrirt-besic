@@ -3,10 +3,16 @@
 ## 授業内コード
 1. 10月5日（木）初めての一歩
 2. 10月5日（木）githab リポジトリ作成
-3. 10月12日（木）
-4. 10月19日（木）
-5. 10月26日（木）
-6. 11月2日（木）
+3. 10月12日（木）文字列の連結　変数　定数　複合代入演算子
+4. 10月19日（木）docment オブジェクトと　DOM
+5. 10月26日（木）その他の　document の取得と挿入、イベント
+6. 11月2日（木）classlist とイベント
+7. 11月9日　(木)if文で条件分岐、左右まで
+8. 11月16日　(木)中間確認テスト
+9.  11月30日　(木)関数
+10. 12月07日　(木)関数、引数、戻り地、関数式、変数のスコープ
+11. 12月14日　(木)コールバック関数、アロー関数
+
 
 ## 10 月　12　日
 
@@ -207,21 +213,7 @@ console.log("ABC" + "DEF"); //文字列
 
 ## 10月26日
 ```js
-<body>
-  <section>
-    <h1>犬のギャラリー</h1>
-    <div class="card1">
-      <h2>柴犬の散歩</h2>
-      <p>雨だったけど、散歩に連れて行った</p>
-    </div>
-    <div class="card2">
-      <h2>秋田犬の寝顔</h2>
-      <p>普段は不細工だけど、寝顔はかわいい</p>
-    </div>
-    <img src="images/dog001.png" alt="柴犬" id="pochi" class="shibaDog" />
-    <img src="images/dog002.png" alt="秋田犬" id="hachiko" class="akitaDog" />
-  </section>
-  <script>
+
     //ここに記述していきます
     //柴犬の画像を取得する
     const shiba = document.querySelector(".shibaDog");
@@ -248,8 +240,6 @@ console.log("ABC" + "DEF"); //文字列
 
 
 
-  </script>
-  <script>
 
 
     //両方とも秋田犬にする
@@ -259,7 +249,7 @@ console.log("ABC" + "DEF"); //文字列
 
 
 
-  </script>
+
 ```
 
 
@@ -285,13 +275,8 @@ elem.removeAttribute(name); //属性を削除します。
 
 
 ```js
-<body>
-    <p>ケーキ（450円）の税込み価格</p>
-    <button class="takeOut">テイクアウト</button>
-    <button class="eatIn">イートイン</button>
-    <p>税込み価格は、<span class="taxIn"></span>円です。</p>
 
-    <script>
+
 
         const cake = 450;
 
@@ -323,12 +308,105 @@ elem.removeAttribute(name); //属性を削除します。
         })
 ```
 
+## 12月１４日
+
+
+```js
+
+
+ //関数式1
+        const concatenateSpace = function (lastName, firstName) {
+            return lastName + " " + firstName;
+        };
+        //関数式2
+        const useConcatenate = function (name, func) {
+            //nameには、配列が入っている
+            //funcには、関数式1が入っている
+            let concatName = func(name[0], name[1]);
+            //concaNameには、関数式1の戻り地が入っている
+            console.log("結合結果：" + concatName);
+        };
+
+        let nameParam = ["梶田", "星弥"];//配列
+
+        //関数式2の実行(引数1 = 配列 , 引数2 = 関数の名前(関数名) )
+        useConcatenate(nameParam, concatenateSpace);
+
+        //結合結果：中田 雄二
+
+
+        //コールバック関数基本　*よく使う
+
+        //関数式1
+        const testFunc = function (func) {
+            //funcには、関数式2
+            //関数の実行後すぐに表示される
+            console.log("testFuncが実行されました");
+            //2秒後に実行される
+            setTimeout(function () {
+                func();
+            }, 2000);
+        };
+        //関数式2
+        const callback = function () {
+            console.log("callbackが実行されました");
+        };
+
+
+        //関数式1を実行している
+        //callbackは関数式2の関数名
+        testFunc(callback);
 
 
 
 
+ const dog = function () {
+            return "わんわん";
+
+        }
+        //関数の定義
+        function dog2() {
+            return "パウワウ";
+        }
 
 
 
-    </script>
+        //関数dogを実行=()があるから
+        console.log(dog());　//わんわん
+        console.log(dog2());//パウワウ
+
+
+        //アロー関数の関数式　*アロー関数は関数式で使う
+        const cat = () => {
+            return "にゃーにゃー";
+        }
+
+        //関数catの実行　= ()があるから
+        console.log(cat())
+
+
+
+        //鳴き方を決めたい アロー関数+引数
+        const animal = (voice) => {
+            return voice
+        }
+
+
+        //関数アニマルの実行
+        //みゃあみゃあ
+        //関数の実行の中にあるのが引数
+        console.log(animal("みゃあみゃあ"));
+
+
+        //thisは予約後なので変数名・関数名に使えない
+        const thisElm = document.querySelector("p");
+        console.log(thisElm);
+
+        thisElm.addEventListener("click", (e) => {
+            console.log("クリック");
+            // console.log(this.textContent);
+            console.log(e);
+        })
+ ```
+
 </body>
