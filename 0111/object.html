@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オブジェクト</title>
+</head>
+
+<body>
+    <script>
+
+        const person = {
+            name: "",
+            age: 0,
+
+            information: function () {
+                return "名前:" + this.name + "&nbsp;年齢" + this.age;
+            }
+        }
+        person.name = "山田太郎";
+        person.age = 18;
+        let info = person.information();
+        document.write("<p>" + info + "</p>");
+
+
+        const myCar_list = {}; //空のオブジェクトを作成
+        myCar_list.make = "Ford";
+        myCar_list.model = "Mustang";
+        myCar_list.year = 1969;
+        myCar_list["2021"] = "51年"; //ブランケットで設定
+        console.log(myCar_list);
+        //{2021：'51年', make: 'Ford', model: 'Mustang', year: 1969}
+
+        console.log(myCar_list.model)
+        myCar_list["2021"] = "51年"; //ブランケットで設定
+        console.log(myCar_list)
+        // オブジェクトは順番を担保しない
+        console.log(myCar_list["2021"])
+
+
+
+
+        //         const dist = {
+        //             apple: "りんご",
+        //             banana: "バナナ",
+        //             orenge, "オレンジ"}()
+
+        //   group = "ぶどう";
+
+        delete dict.orange;
+        console.log(dict);
+        //{apple: 'りんご', banana: 'バナナ', grape: 'ぶどう'}
+
+        dich.apple = "りんご";
+        console.log(dict);
+
+        //{apple: 'りんご', banana: 'バナナ', grape: 'ぶどう'}
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
