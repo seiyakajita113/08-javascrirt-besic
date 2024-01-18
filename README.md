@@ -409,4 +409,88 @@ elem.removeAttribute(name); //属性を削除します。
         })
  ```
 
+## 0111
+
+## 0118
+
+```js
+const junishi = ["丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌"];
+        const twopieces = ["子", "亥"];
+        const junishis = document.querySelector(".junishis");
+        //配列junishiに子と亥を追加する。
+        //子は、twopieces[0]
+        //亥は、twopieces[1]
+
+        //先頭に追加する場合は、unshift
+        junishi.unshift(twopieces[0]);
+
+        //最後に追加する場合は、push
+        junishi.push(twopieces[1]);
+
+
+        for (eto of junishi) {
+            const list = document.createElement("li");
+            list.innerHTML = eto;
+            junishis.appendChild(list);
+        }
+
+
+        const staff = [
+            ["佐藤", 41, "東京"],
+            ["鈴木", 25, "大阪"],
+            ["林", 34, "札幌"],
+        ];
+
+        for (let i = 0; i < staff.length; i++) {
+            console.log(staff[i][0]);
+            //全部要素を取りたい
+            //ネスト　(入れ子)の場合は、iの次はjを使う
+            for (let i = 0; i < staff[i].length; j++) {
+                console.log(staff[i][j]);
+                //jの次はkを使う
+                //for文のネストは３階層まで。４以上になる場合は、どこかおかしい。
+            }
+        }
+
+
+ const tableElm = document.querySelector(".table_gafam");
+
+    for (let co of corporation) {
+        const trElm = document.createElement("tr");
+        console.log(co);
+        tableElm.appendChild(trElm);
+        for (let key in co) {
+            console.log(key);
+            const tdElm = document.createElement("td");
+            //危険：オブジェクトは順番を保証しない
+            tdElm.innerHTML = co[key];
+            trElm.appendChild(tdElm);
+        }
+        tableElm.appendChild(trElm);
+    }
+
+
+
+
+    for (let i = 0; i < corporation.length; i++) {
+        console.log(corporation[i]);
+    }
+
+    // 練習問題4-1 p183
+
+    let array = []
+
+    array.push(1);
+    array.push(2);
+    array.push(3);
+
+    for (elem of array) {
+        console.log(elem);
+    }
+
+
+
+ ```
+
+
 </body>
