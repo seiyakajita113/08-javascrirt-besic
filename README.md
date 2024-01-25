@@ -488,9 +488,63 @@ const junishi = ["丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", 
         console.log(elem);
     }
 
+ ```
+
+# 1月２５日
+
+```js
+
+      const npb2023 = [
+            { Team: "阪神タイガース", Wins: 85, Loss: 53, Ties: 5, Rate: 0.616 },
+            { Team: "広島東洋カープ", Wins: 74, Loss: 65, Ties: 4, Rate: 0.532 },
+            { Team: "横浜DeNAベイスターズ", Wins: 74, Loss: 66, Ties: 3, Rate: 0.529 },
+            { Team: "読売ジャイアンツ", Wins: 71, Loss: 70, Ties: 2, Rate: 0.504 },
+            { Team: "東京ヤクルトスワローズ", Wins: 57, Loss: 83, Ties: 3, Rate: 0.407 },
+            { Team: "中日ドラゴンズ", Wins: 56, Loss: 82, Ties: 5, Rate: 0.406 },
+        ];
+
+        //配列を取得
+        //[]配列リテラル {}オブジェクトリテラル　""文字列リテラル　''テンプレートリテラル
+        for (let team of npb2023) {
+            console.log(team); //要素 = 各チームの成績
+            for (let key in team) {
+                console.log(team[key]);
+            }
+        }
+
+
+ const now = new Date(); //Dateオブジェクト
+        console.log(now); 　//Sat Dec 18 2021 21:06:07 GMT+0900 (日本標準時)
+
+
+        const day = ["日", "月", "火", "水", "木", "金", "土"];
+        console.log(now.getDay());
+        console.log(day[now.getDay()]);
+
+        const promotionDay = new Date("2024-2-8");
+        console.log(promotionDay - now);//ミリ秒
+        const difference = promotionDay - now; //残り時間
+
+        //ミリ秒→秒
+        const seconds = difference / 1000;
+        console.log(seconds); //秒
+        //秒→分
+        const minites = seconds / 60;
+        console.log(minites) //分
+
+        //分→時間
+        const hours = minites / 60;
+        console.log(hours); //時間
+
+        //時間→日
+        // const days = hours / 24;
+        // console.log(days); //日
+
+        //ミリ秒→日
+        const days = difference / (1000 * 60 * 60 * 24);
+        console.log(days);
 
 
  ```
-
 
 </body>
