@@ -1,0 +1,30 @@
+<body>
+
+    <script>
+        const cat = {
+
+            image: "cat.jpg",
+            show: function () {
+                const catElement = document.createElement("div");
+                catElement.innerHTML = `
+
+      <img src="${this.image}" alt="${this.name}の画像" id="catImage">
+    `;
+                document.body.appendChild(catElement);
+
+                const catImage = document.getElementById("catImage");
+                catImage.style.transition = "opacity 0.3s ease";
+
+                catImage.addEventListener("mouseover", function () {
+                    catImage.style.opacity = "0.7";
+                });
+
+                catImage.addEventListener("mouseout", function () {
+                    catImage.style.opacity = "1.0";
+                });
+            }
+        };
+
+        cat.show();
+    </script>
+</body>
